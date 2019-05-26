@@ -37,13 +37,21 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				multiplex: {
+					secret: null,
+					id: "",
+					url: "http://localhost:1948"
+				},
 				dependencies: [
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js', async: true },
+					{ src: 'plugin/multiplex/client.js', async: true },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true }
 				]
 			});
-		</script>
-	</body>
-</html>
+				</script>
+		</body>
+		
+		</html>
