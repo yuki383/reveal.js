@@ -27,6 +27,10 @@
 			<div class="slides">
 				<section>Slide 1</section>
 				<section>Slide 2</section>
+				<section>
+					<section>hoge</section>
+					<section>fuga</section>
+				</section>
 			</div>
 		</div>
 
@@ -52,6 +56,10 @@
 						{ src: 'plugin/highlight/highlight.js', async: true }
 					]
 				});
+
+				Reveal.addEventListener("slidechanged", function( event ) {
+					console.log(Reveal.getIndices()	)
+				})
 			</script>
 		</body>
 		
